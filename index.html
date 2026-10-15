@@ -560,7 +560,7 @@
                 <button class="tab-btn active" id="tab-together" onclick="switchTab('together')">Juntos Desde</button>
                 <button class="tab-btn" id="tab-meet" onclick="switchTab('meet')">Próximo Reencuentro</button>
             </div>
-            <p style="font-size: 0.78rem; color: var(--text-light); margin-bottom: 10px;" id="counter-description">Desde el miércoles 13 de mayo</p>
+            <p style="font-size: 0.78rem; color: var(--text-light); margin-bottom: 10px;" id="counter-description">Desde el miércoles 13 de mayo de 2026</p>
             <div class="counter-grid">
                 <div class="time-box">
                     <div class="time-value" id="days">00</div>
@@ -703,8 +703,8 @@
         setInterval(updateClocks, 1000);
         updateClocks();
 
-        // Contadores
-        const fechaInicio = new Date(2025, 4, 13, 0, 0, 0);
+        // Contadores: Inicio en 13 de mayo de 2026
+        const fechaInicio = new Date(2026, 4, 13, 0, 0, 0); // (Mayo = mes 4)
 
         // Próximo reencuentro programado a 6 años y 7 meses
         const fechaReencuentro = new Date();
@@ -717,7 +717,7 @@
             currentMode = mode;
             document.getElementById('tab-together').classList.toggle('active', mode === 'together');
             document.getElementById('tab-meet').classList.toggle('active', mode === 'meet');
-            document.getElementById('counter-description').innerText = mode === 'together' ? 'Desde el miércoles 13 de mayo' : 'Para volver a abrazarnos';
+            document.getElementById('counter-description').innerText = mode === 'together' ? 'Desde el miércoles 13 de mayo de 2026' : 'Para volver a abrazarnos';
             actualizarContador();
         }
 
@@ -748,7 +748,7 @@
             window.open('https://open.spotify.com/playlist/7x32XzXKSQVUE66nrnU8NG?si=pS3KWdGQRkydlS8bUTddtA&utm_source=whatsapp&pi=CvpvrBZXSHGuP', '_blank');
         }
 
-        // Abrazo Virtual Optimizado
+        // Abrazo Virtual
         const mensajesRomanticos = [
             "“Te amaré toda la vida, no me tengas miedo.”",
             "“Amo como eres sin importar lo que digan los demás.”",
@@ -812,7 +812,7 @@
             document.getElementById('modal').style.display = 'none';
         }
 
-        // Canvas de Corazones (Optimizado)
+        // Canvas de Corazones
         const canvas = document.getElementById('hearts-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
